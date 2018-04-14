@@ -1,0 +1,17 @@
+void insertionSort(int array[])
+{
+    int length = array.Length;
+
+    for (int i = 1; i < length; i++)
+    {
+        int j = i;
+        while ((j > 0) && (array[j] < array[j - 1]))
+        {
+            int k = j - 1;
+            int temp = array[k];
+            array[k] = array[j];
+            array[j] = temp;
+            j--;
+        }
+    }
+}
